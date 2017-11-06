@@ -1,0 +1,17 @@
+set -a
+
+EDITOR=vi
+ENV=$HOME/.shrc
+GPG_TTY=`tty`
+HOSTNAME=${HOSTNAME:-`hostname`}
+LANG=en_US.UTF-8
+LC_COLLATE=C
+LESS=iMR
+LESSHISTFILE=/dev/null
+MAKEOBJDIRPREFIX=$HOME/obj
+MORE=iR
+PAGER=more; MANPAGER=$PAGER' -s'
+PATH=$PATH:$HOME/bin
+TOP='-atu -s1'
+
+set +a

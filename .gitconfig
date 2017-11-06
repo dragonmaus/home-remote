@@ -1,0 +1,14 @@
+[color]
+	ui = auto
+[commit]
+	gpgsign = true
+[credential]
+	helper = store
+[gpg]
+	program = gpg2
+[push]
+	default = simple
+[user]
+	email = swdragonmaus@gmail.com
+	name = David Wildasin
+	signingkey = AA12E1E891EF069C

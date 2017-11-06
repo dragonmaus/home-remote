@@ -1,0 +1,31 @@
+case $TERM in
+dvtm|st)
+  TERM=xterm
+  export TERM
+  ;;
+dvtm-*|st-*)
+  TERM=xterm-${TERM#*-}
+  export TERM
+  ;;
+esac
+
+alias hd='hexdump -C'
+alias lc='ls -C'
+alias ll='ls -l'
+alias ls='ls -1AF'
+alias rm='rm -d'
+
+set -o physical
+set -o vi
+
+cd() {
+  command cd ${1+"$@"} && cdhook
+}
+cdhook() {
+  PWD=`env - PATH="$PATH" pwd`
+  export PWD
+  printf '\033];%s%s/\007' "$HOSTNAME" "${PWD%/}" >/dev/tty
+}
+cdhook
+
+trap -- 'test -r $HOME/.logout && . $HOME/.logout' EXIT
