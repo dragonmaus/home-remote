@@ -11,7 +11,6 @@ LESSHISTFILE=/dev/null
 MAKEOBJDIRPREFIX=$HOME/obj
 MORE=iR
 PAGER=more; MANPAGER=$PAGER' -s'
-PATH=$PATH:$HOME/bin
 TOP='-atu -s1'
 
 set +a
