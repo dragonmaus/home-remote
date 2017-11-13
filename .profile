@@ -14,3 +14,6 @@ PAGER=more; MANPAGER=$PAGER' -s'
 TOP='-atu -s1'
 
 set +a
+
+pgrep -q ssh-agent || ssh-agent >"$HOME"/.ssh/agent.sh
+test -r "$HOME"/.ssh/agent.sh && . "$HOME"/.ssh/agent.sh
