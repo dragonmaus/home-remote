@@ -1,1 +1,7 @@
-sudo -k
+count=`who | grep "^$USER  " | wc -l`
+if test $count -gt 1; then
+  sudo -k
+else
+  eval `ssh-agent -k`
+  sudo -K
+fi
