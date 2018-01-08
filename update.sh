@@ -4,3 +4,4 @@ set -e
 
 sudo portsnap auto
 sudo portmaster -Bady
+git pull
