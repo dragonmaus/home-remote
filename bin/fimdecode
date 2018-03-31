@@ -1,5 +1,8 @@
 #!/bin/sh
 
+TZ=EST5EDT
+export TZ
+
 while read a b c d e; do
   test x"$a" = xFIM || continue
   b=`date -j -r "$b" +'%F %T %z'`
