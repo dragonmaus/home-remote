@@ -11,6 +11,7 @@ LESSHISTFILE=/dev/null
 MAKEOBJDIRPREFIX=$HOME/obj
 MORE=iR
 PAGER=more; MANPAGER=$PAGER' -s'
+PATH=$HOME/.cabal/bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
 TOP='-atu -s1'
 
