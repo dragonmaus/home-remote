@@ -1,6 +1,6 @@
 /.abduco/
-/.bundle/
+/.cabal/
+/.cargo/
+/.ghc/
 /.gnupg/
 /.ssh/
-/.weechat/
-/.znc
